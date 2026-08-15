@@ -1,203 +1,471 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
-
+<html lang="en">
 <head>
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="keywords"
-    content="real estate agent, Celebration, Kissimmee">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lynkst — from handshake to record</title>
+<meta name="description" content="The system of record for in-person encounters. Who showed up, what they were told, what they agreed to, and what they did next.">
+<meta property="og:title" content="Lynkst — from handshake to record">
+<meta property="og:description" content="The system of record for in-person encounters. Who showed up, what they were told, what they agreed to, and what they did next.">
+<meta property="og:url" content="https://lynkst.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#080b14">
+<link rel="canonical" href="https://lynkst.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   LYNKST — shared design language
+   ============================================================ */
+:root{
+  /* brand, sampled from the mark */
+  --blue-900:#0a2a6b; --blue-700:#0f4bb5; --blue-600:#1668e3; --blue-500:#2196f3;
+  --blue-400:#4fb0ff; --blue-200:#a8d4ff; --blue-50:#eef6ff;
+  --violet-600:#6c3bf5; --violet-500:#8b5cf6; --violet-400:#a78bfa; --violet-50:#f4f0ff;
 
-  <!-- Primary Meta Tags -->
-  <title>LYNKST - Linking you to who matters!</title>
-  <meta name="title"
-    content="LYNKST - Linking you to who matters!">
-  <meta name="description"
-    content="Coming soon... A new and easy way to start sharing your links and relevant info about your business">
+  --ink:#0a0d14; --ink-1:#161b26; --ink-2:#3d4557; --ink-3:#6b7387; --ink-4:#9aa1b2;
+  --paper:#ffffff; --paper-2:#fafbfd; --paper-3:#f4f6fa;
+  --line:#e5e9f0; --line-2:#eef1f6;
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type"
-    content="website">
-  <meta property="og:url"
-    content="https://lynkst.com/">
-  <meta property="og:title"
-    content="LYNKST - Linking you to who matters!">
-  <meta property="og:description"
-    content="Coming soon... A new and easy way to start sharing your links and relevant info about your business">
-  <meta property="og:image"
-    content="https://github.com/italocp04/italocp04.github.io/blob/main/images/Logo-smalljpeg.jpg?raw=true">
+  --grad: linear-gradient(115deg, var(--violet-600) 0%, var(--blue-600) 48%, var(--blue-500) 100%);
+  --grad-soft: linear-gradient(115deg, var(--violet-500), var(--blue-500));
 
-  <!-- Twitter -->
-  <meta property="twitter:card"
-    content="summary_large_image">
-  <meta property="twitter:url"
-    content="https://lynkst.com/">
-  <meta property="twitter:title"
-    content="LYNKST - Linking you to who matters!">
-  <meta property="twitter:description"
-    content="Coming soon... A new and easy way to start sharing your links and relevant info about your business">
-  <meta property="twitter:image"
-    content="https://github.com/italocp04/italocp04.github.io/blob/main/images/Logo-smalljpeg.jpg?raw=true">
+  --r-sm:10px; --r:14px; --r-lg:22px; --r-xl:30px;
+  --shadow-sm:0 1px 2px rgba(10,13,20,.05), 0 4px 12px -6px rgba(10,13,20,.10);
+  --shadow:0 2px 4px rgba(10,13,20,.04), 0 14px 40px -18px rgba(10,13,20,.22);
+  --shadow-lg:0 40px 80px -40px rgba(10,20,50,.45);
+  --ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  font-feature-settings:"cv02","cv03","cv04";
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.narrow{max-width:760px;margin:0 auto;padding:0 28px}
 
-  <meta name="description"
-    content="">
-  <meta name="page_type"
-    content="np-template-header-footer-from-plugin">
-  <title>LYNKST - Coming Soon</title>
-  <link rel="stylesheet"
-    href="nicepage.css"
-    media="screen">
-  <link rel="stylesheet"
-    href="Page-1.css"
-    media="screen">
-  <script class="u-script"
-    type="text/javascript"
-    src="jquery.js"
-    defer=""></script>
-  <script class="u-script"
-    type="text/javascript"
-    src="nicepage.js"
-    defer=""></script>
-  <meta name="generator"
-    content="Nicepage 3.3.7, nicepage.com">
-  <link rel="icon"
-    href="images/favicon.svg">
-  <link id="u-theme-google-font"
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-  <link id="u-page-google-font"
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|comfortaa">
+/* ---- type ---- */
+.eyebrow{
+  font-size:12px;font-weight:650;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue-600);margin:0 0 18px;
+}
+.eyebrow.on-dark{color:var(--blue-400)}
+h1,h2,h3{margin:0;letter-spacing:-.035em;line-height:1.05;font-weight:640}
+h1{font-size:clamp(40px,6.2vw,72px)}
+h2{font-size:clamp(30px,4.1vw,46px);letter-spacing:-.032em;line-height:1.1}
+h3{font-size:21px;letter-spacing:-.02em;line-height:1.25}
+.lede{font-size:clamp(17px,1.9vw,21px);line-height:1.55;color:var(--ink-2);margin:22px 0 0}
+.lede.on-dark{color:#b9c2d6}
+p{margin:0 0 18px}
+.muted{color:var(--ink-3)}
+.serif-quote{font-family:var(--serif);font-size:clamp(24px,3.4vw,38px);line-height:1.28;
+  letter-spacing:-.015em;font-weight:400}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:12px;
+  border:1px solid transparent;font-weight:600;font-size:15px;letter-spacing:-.01em;
+  text-decoration:none;transition:transform .14s ease, box-shadow .14s ease, background .14s;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 26px -10px rgba(52,80,220,.7)}
+.btn-primary:hover{box-shadow:0 16px 34px -12px rgba(52,80,220,.8)}
+.btn-ghost{border-color:rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.05)}
+.btn-ghost:hover{background:rgba(255,255,255,.11)}
+.btn-line{border-color:var(--line);background:var(--paper);color:var(--ink)}
+.btn-line:hover{border-color:#cfd6e2;background:var(--paper-2)}
+.btn svg{width:17px;height:17px}
+
+/* ---- brand mark ---- */
+.mark{width:34px;height:auto;flex:none}
+.wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.wordmark .wt{font-size:22px;font-weight:680;letter-spacing:-.045em}
+.wordmark .wt em{font-style:normal;background:var(--grad-soft);-webkit-background-clip:text;
+  background-clip:text;color:transparent}
+
+/* ---- nav ---- */
+.nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:.2s}
+.nav.dark{background:#080b14;border-bottom-color:rgba(255,255,255,.07);color:#fff}
+.nav.light{background:rgba(255,255,255,.82);border-bottom-color:var(--line-2);color:var(--ink)}
+.nav .inner{display:flex;align-items:center;gap:26px;height:70px}
+.nav .sp{margin-left:auto}
+.navlink{font-size:14.5px;font-weight:520;text-decoration:none;opacity:.72;transition:.15s;white-space:nowrap}
+.navlink:hover{opacity:1}
+.nav .btn{white-space:nowrap}
+
+/* mobile: the nav must never wrap — most traffic arrives here from a phone */
+@media (max-width:720px){
+  .nav .inner{height:58px;gap:12px}
+  .nav .navlink,
+  .nav .pill,
+  .nav .btn{display:none}
+  .wordmark .wt{font-size:19px}
+  .hero .wrap{padding-top:52px;padding-bottom:64px}
+  section{padding:64px 0}
+  .sec-tight{padding:48px 0}
+  .card{padding:24px}
+  .formcard .fh{padding:24px 20px 20px}
+  .formcard .fb{padding:22px 20px 26px}
+  .shelf{margin-top:44px}
+  .cta-row .btn{width:100%;justify-content:center}
+  footer .wrap{gap:14px}
+}
+
+/* sticky action bar — the form sits a long way down on a phone */
+.stickybar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.94);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+}
+.stickybar .btn{width:100%;justify-content:center;padding:15px 22px}
+@media (max-width:720px){ .stickybar{display:block} body{padding-bottom:82px} }
+
+/* ---- dark hero ---- */
+.hero{position:relative;overflow:hidden;background:#080b14;color:#fff;isolation:isolate}
+.hero::before{
+  content:"";position:absolute;inset:-30% -10% auto -10%;height:150%;z-index:-2;
+  background:
+    radial-gradient(46% 46% at 18% 12%, rgba(124,77,255,.55), transparent 62%),
+    radial-gradient(44% 44% at 82% 8%,  rgba(33,150,243,.50), transparent 60%),
+    radial-gradient(60% 50% at 50% 96%, rgba(22,104,227,.34), transparent 66%);
+  filter:blur(6px);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent 78%);
+}
+.hero .wrap{position:relative;padding-top:88px;padding-bottom:100px;text-align:center}
+.hero .inner-h{max-width:900px;margin:0 auto}
+.hero .lede{margin-left:auto;margin-right:auto}
+.hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px;justify-content:center;align-items:center}
+.hero h1{margin-bottom:4px}
+
+/* ---- hero shelf: a glimpse of the thing ---- */
+.shelf{
+  margin:64px auto 0;max-width:940px;border-radius:20px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);
+  box-shadow:0 60px 120px -50px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.09);
+  backdrop-filter:blur(8px);
+}
+.shelf .sh-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;
+  border-bottom:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03)}
+.shelf .sh-bar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);display:block}
+.shelf .sh-bar span{margin-left:8px;font-family:var(--mono);font-size:11.5px;color:#8792ab}
+.shelf .sh-body{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07)}
+@media (max-width:720px){.shelf .sh-body{grid-template-columns:1fr}}
+.shelf .cell{background:#0c101b;padding:22px 20px;text-align:left}
+.shelf .cell .ck{font-size:11px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:#6f7b95}
+.shelf .cell .cv{font-size:26px;font-weight:650;letter-spacing:-.03em;margin:8px 0 5px;color:#fff}
+.shelf .cell .cs{font-size:12.5px;color:#8792ab;line-height:1.45}
+
+/* ---- sections ---- */
+section{padding:96px 0}
+.sec-tight{padding:70px 0}
+.bg-2{background:var(--paper-2)}
+.bg-3{background:var(--paper-3)}
+.bg-ink{background:var(--ink);color:#fff}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---- cards ---- */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px;box-shadow:var(--shadow-sm)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:880px){.grid-3,.grid-2{grid-template-columns:1fr}}
+.numtag{
+  width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex:none;
+  background:var(--blue-50);color:var(--blue-700);font-weight:700;font-size:14px;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---- stat ---- */
+.stat{font-size:clamp(34px,4.6vw,52px);font-weight:660;letter-spacing:-.04em;line-height:1;
+  background:var(--grad-soft);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-k{font-size:14px;color:var(--ink-3);margin-top:10px;line-height:1.45}
+
+/* ---- form ---- */
+.formcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-xl);
+  box-shadow:var(--shadow-lg);overflow:hidden}
+.formcard .fh{padding:30px 32px 24px;border-bottom:1px solid var(--line-2);background:var(--paper-2)}
+.formcard .fb{padding:28px 32px 32px}
+.q{margin-bottom:26px}
+.q > label{display:block;font-size:15px;font-weight:600;letter-spacing:-.01em;margin-bottom:4px}
+.q .hint{font-size:13.5px;color:var(--ink-3);margin-bottom:12px;line-height:1.5}
+.opts{display:flex;flex-wrap:wrap;gap:9px}
+.opt{
+  padding:9px 15px;border:1px solid var(--line);border-radius:11px;background:var(--paper);
+  font-size:14px;font-weight:500;color:var(--ink-2);transition:.13s;text-align:left;
+}
+.opt:hover{border-color:#c9d2e0}
+.opt[aria-pressed="true"]{
+  border-color:var(--blue-600);background:var(--blue-50);color:var(--blue-700);font-weight:620;
+  box-shadow:0 0 0 3px rgba(22,104,227,.12);
+}
+.q textarea,.q input[type=email],.q input[type=text]{
+  width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font-size:15px;
+  background:var(--paper);transition:.13s;font-family:inherit;
+}
+.q textarea{min-height:96px;resize:vertical}
+.q textarea:focus,.q input:focus{outline:none;border-color:var(--blue-600);
+  box-shadow:0 0 0 3px rgba(22,104,227,.13)}
+.formfoot{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+.privacy{font-size:12.5px;color:var(--ink-3);line-height:1.5;flex:1;min-width:220px}
+.done{padding:60px 32px;text-align:center}
+.done .tick{width:62px;height:62px;border-radius:50%;background:var(--grad);color:#fff;
+  display:grid;place-items:center;margin:0 auto 20px;font-size:28px}
+
+/* ---- misc ---- */
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:30px;
+  font-size:12.5px;font-weight:600;letter-spacing:.01em}
+.pill-dark{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#cfd8ea}
+.pill-light{background:var(--blue-50);border:1px solid #d5e6fb;color:var(--blue-700)}
+.dot-live{width:7px;height:7px;border-radius:50%;background:#4ade80;
+  box-shadow:0 0 0 3px rgba(74,222,128,.22)}
+.honest{border-left:3px solid var(--violet-500);padding:4px 0 4px 20px;color:var(--ink-2);
+  font-size:15.5px;line-height:1.6}
+footer{padding:56px 0 44px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14px}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--ink)}
+.fadein{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.fadein.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fadein{opacity:1;transform:none;transition:none}}
 
 
-
-
-  <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "LYNKST - Coming Soon",
-		"url": "index.html"
-}</script>
-  <meta property="og:title"
-    content="Page 1">
-  <meta property="og:type"
-    content="website">
-  <meta name="theme-color"
-    content="#478ac9">
-  <link rel="canonical"
-    href="https://lynkst.com">
-  <meta property="og:url"
-    content="https://lynkst.com">
+</style>
 </head>
+<body>
+<nav class="nav dark" id="nav">
+  <div class="wrap inner">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 46 66" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg-v" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0" stop-color="#A98BFF"/><stop offset="1" stop-color="#6C3BF5"/></linearGradient>
+    <linearGradient id="lg-b" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0" stop-color="#5CB6FF"/><stop offset="1" stop-color="#1668E3"/></linearGradient>
+    <mask id="lg-m"><rect width="46" height="66" fill="#fff"/>
+      <path d="M14 30h18v10H14z" fill="#000"/></mask>
+  </defs>
+  <rect x="13" y="4" width="30" height="40" rx="15" fill="none" stroke="url(#lg-v)" stroke-width="7.5"/>
+  <rect x="3" y="22" width="30" height="40" rx="15" fill="none" stroke="url(#lg-b)" stroke-width="7.5"/>
+  <path d="M33 30v9" stroke="url(#lg-v)" stroke-width="7.5" stroke-linecap="butt"/>
+</svg><span class="wt">Lynk<em>s</em>t</span></a>
+    <div class="sp"></div>
+    <a class="navlink" href="#what" style="color:#fff">What it is</a>
+    <a class="navlink" href="#who" style="color:#fff">Who it's for</a>
+    <a class="btn btn-ghost" href="#who" style="padding:9px 17px;font-size:14px">Tell us we're wrong</a>
+  </div>
+</nav>
 
-<body data-home-page="Page-1.html"
-  data-home-page-title="Page 1"
-  class="u-body">
-  <section class="u-clearfix u-gradient u-section-1"
-    id="sec-43a3">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <img src="images/Logo.png"
-        alt=""
-        class="u-align-center-xs u-image u-image-default u-image-1"
-        data-image-width="3766"
-        data-image-height="1260">
-      <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-        <div class="u-gutter-0 u-layout">
-          <div class="u-layout-row">
-            <div
-              class="u-align-center-xs u-container-style u-layout-cell u-size-30-xl u-size-36-lg u-size-36-md u-size-36-sm u-size-36-xs u-image-4">
-              <div class="u-container-layout u-container-layout-1">
-                <h1 class="u-custom-font u-font-montserrat u-text u-text-custom-color-2 u-title u-text-1">Coming soon...
-                 A new and easy way to start sharing your links and relevant info about your business</h1>
-                <img src="images/phonemockup1-12.png"
-                  alt=""
-                  class="u-expanded-width-lg u-expanded-width-md u-hidden-lg u-hidden-md u-hidden-xl u-hidden-xs u-image u-image-contain u-image-default u-image-2"
-                  data-image-width="8216"
-                  data-image-height="10932">
-                <img src="images/phonemockup1-12.png"
-                  alt=""
-                  class="u-align-center-xs u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-hidden-lg u-hidden-md u-hidden-sm u-hidden-xl u-image u-image-contain u-image-default u-image-3"
-                  data-image-width="8216"
-                  data-image-height="10932">
-              </div>
-            </div>
-            <div
-              class="u-container-style u-hidden-sm u-hidden-xs u-layout-cell u-size-24-lg u-size-24-md u-size-24-sm u-size-24-xs u-size-30-xl u-layout-cell-2">
-              <div class="u-container-layout u-valign-top-xl u-container-layout-2">
-                <img src="images/phonemockup1-12.png"
-                  alt=""
-                  class="u-expanded-width-lg u-hidden-sm u-image u-image-contain u-image-default u-image-4"
-                  data-image-width="8216"
-                  data-image-height="10932">
-              </div>
-            </div>
-          </div>
-        </div>
+<header class="hero">
+  <div class="wrap">
+    <div class="inner-h">
+      <span class="pill pill-dark" style="margin-bottom:28px"><span class="dot-live"></span>Pre-launch — talking to people before we build</span>
+      <h1>From handshake<br>to record.</h1>
+      <p class="lede on-dark" style="max-width:660px">
+        Business happens in rooms. Someone walks into an open house, or up to a stand at a trade show, and for
+        a few minutes there is a real conversation. Then everyone leaves, and almost none of it survives.
+      </p>
+      <p class="lede on-dark" style="max-width:660px;margin-top:14px">
+        Lynkst is the system of record for that encounter — who showed up, what they were told,
+        what they agreed to, and what they did next.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/openhouse">
+          I run open houses
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="/events">
+          I run trade show stands
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
-  </section>
-  <section class="u-clearfix u-valign-middle-sm u-section-2"
-    id="sec-5007">
-    <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-      <div class="u-gutter-0 u-layout">
-        <div class="u-layout-row">
-          <div class="u-align-center-xs u-container-style u-gradient u-layout-cell u-size-30 u-layout-cell-1">
-            <div class="u-container-layout u-container-layout-1">
-              <img src="images/Doublephone.png"
-                alt=""
-                class="u-align-center-xs u-image u-image-default u-image-1"
-                data-image-width="2644"
-                data-image-height="4196">
-              <h4 class="u-custom-font u-hidden-lg u-hidden-md u-hidden-xl u-text u-text-white u-text-1">LOOKING FOR A NEW WAY TO SHARE YOUR CONTACT INFO???</h4>
-              <h2
-                class="u-align-center-sm u-custom-font u-font-montserrat u-hidden-lg u-hidden-md u-hidden-xl u-text u-text-white u-text-2">
-                Lynkst: Links you want to share about you and your business!</h2>
-              <p class="u-hidden-lg u-hidden-md u-hidden-xl u-text u-text-white u-text-3">LYNKST is a platform to host a
-                micro website where can you can share relevant information about you and/or your business. With multiple
-                possibilities of sharing, including QR Code and NFC Tags, we want to help you transition to the digital age!</p>
-            </div>
-          </div>
-          <div class="u-container-style u-gradient u-hidden-sm u-hidden-xs u-layout-cell u-size-30 u-layout-cell-2">
-            <div
-              class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-container-layout-2">
-              <h4 class="u-custom-font u-font-montserrat u-text u-text-white u-text-4">LOOKING FOR A NEW WAY TO SHARE YOUR CONTACT INFO???</h4>
-              <h2 class="u-custom-font u-font-montserrat u-text u-text-white u-text-5">Lynkst: Link everything you want
-                to share about your business!</h2>
-              <p class="u-text u-text-white u-text-6">LYNKST is a platform to host a
-                micro-website where you can share relevant information about you and/or your business. With multiple
-                possibilities of sharing, including QR Code and NFC Tags, we want to help you transition to the digital age! All you have to do is
-                share your page and get linked with people with Lynkst! </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-align-left u-clearfix u-custom-color-2 u-section-3"
-    id="sec-a068">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="u-clearfix u-custom-html u-custom-html-1">
-        <iframe frameborder="0"
-          style="height:900px;width:99%;border:none;"
-          src="https://forms.zohopublic.com/virtualoffice20031/form/ContactForm/formperma/xXogIqdcE_0JwXh6_Nth0ertF9_lUSgUDN7KrY-Iz-Y"></iframe>
-      </div>
-    </div>
-  </section>
 
-
-  <footer class="u-align-left u-clearfix u-footer u-grey-80 u-footer"
-    id="sec-dbd6">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <p class="u-align-center u-small-text u-text u-text-variant u-text-1">Get your own digital&nbsp; card today!</p>
-      <a class="u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
-        href="mailto:contact@lynkst.com?subject=I%20want%20a%20digital%20buusiness%20card">Contact Lynkst</a>
-      <div class="u-align-center u-clearfix u-custom-html u-expanded-width-xs u-custom-html-1">
-        <div> © Copyright
-          <script>document.write(new Date().getFullYear())</script>, Lynkst.
-        </div>
+    <div class="shelf">
+      <div class="sh-bar"><i></i><i></i><i></i><span>lynkst.com/e/8f2a1b — one encounter</span></div>
+      <div class="sh-body">
+        <div class="cell"><div class="ck">Who showed up</div><div class="cv">14:22</div>
+          <div class="cs">Checked themselves in by QR. Unrepresented. Device and time stamped by us, not by them.</div></div>
+        <div class="cell"><div class="ck">What they agreed to</div><div class="cv">4 permissions</div>
+          <div class="cs">Disclosure, materials, email, SMS — captured separately, two refused, wording kept.</div></div>
+        <div class="cell"><div class="ck">What they did next</div><div class="cv">9m 40s</div>
+          <div class="cs">Opened the pack twice, came back to page 2 on Wednesday, forwarded it once.</div></div>
       </div>
     </div>
-  </footer>
+  </div>
+</header>
+
+<section class="bg-ink" style="padding:74px 0;border-top:1px solid rgba(255,255,255,.07)">
+  <div class="narrow" style="text-align:center">
+    <p class="serif-quote" style="margin:0;color:#fff">
+      The CRM remembers the deal.<br><span style="background:var(--grad-soft);-webkit-background-clip:text;background-clip:text;color:transparent">We remember the room.</span>
+    </p>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div style="max-width:720px;margin-bottom:56px">
+      <p class="eyebrow">What it is</p>
+      <h2>A name and an email address is not a record of a meeting.</h2>
+      <p class="lede">Three things we think are true, and would like to be told we're wrong about.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card fadein">
+        <div class="numtag" style="margin-bottom:18px">01</div>
+        <h3>Capture the encounter, not the contact</h3>
+        <p class="muted" style="margin:14px 0 0;font-size:15px">
+          Who arrived, when, through which door. What was presented to them. What they acknowledged.
+          What they were given. And what the person on our side of the table actually observed —
+          written down while they're still standing there, not from memory at 11pm.
+        </p>
+      </div>
+      <div class="card fadein">
+        <div class="numtag" style="margin-bottom:18px">02</div>
+        <h3>Consent, unbundled</h3>
+        <p class="muted" style="margin:14px 0 0;font-size:15px">
+          A disclosure acknowledgement, a request for materials, an email opt-in and an SMS opt-in
+          are four different permissions. We capture them separately, record which were refused,
+          and keep the exact wording that was on screen at the time.
+        </p>
+      </div>
+      <div class="card fadein">
+        <div class="numtag" style="margin-bottom:18px">03</div>
+        <h3>The value is in the between-times</h3>
+        <p class="muted" style="margin:14px 0 0;font-size:15px">
+          The moment is short. The period it belongs to is long — a listing runs 56 to 118 days,
+          an event programme runs 8 to 20 shows a year. We're the instrument panel for that period,
+          fed by the in-person moment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-2" id="who">
+  <div class="wrap">
+    <div style="max-width:680px;margin-bottom:48px">
+      <p class="eyebrow">Who it's for</p>
+      <h2>Two rooms. Same problem.</h2>
+    </div>
+
+    <div class="grid-2">
+      <a href="/openhouse" class="card fadein" style="text-decoration:none;display:block;position:relative;overflow:hidden;padding:34px">
+        <div style="position:absolute;inset:0 auto 0 0;width:4px;background:var(--grad)"></div>
+        <span class="pill pill-light" style="margin-bottom:22px">Real estate</span>
+        <h3 style="font-size:26px">The open house</h3>
+        <p class="muted" style="margin:14px 0 0;font-size:15.5px">
+          Forty people come through on a Sunday. Monday morning the seller asks how it went, and the honest
+          answer is "good turnout, some interest" — which is what you said last week. Three weeks later the
+          price needs to come down and you have to argue for it out of adjectives.
+        </p>
+        <span class="btn btn-line" style="margin-top:26px">
+          See what we're building
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a href="/events" class="card fadein" style="text-decoration:none;display:block;position:relative;overflow:hidden;padding:34px">
+        <div style="position:absolute;inset:0 auto 0 0;width:4px;background:var(--grad)"></div>
+        <span class="pill pill-light" style="margin-bottom:22px">Events</span>
+        <h3 style="font-size:26px">The trade show stand</h3>
+        <p class="muted" style="margin:14px 0 0;font-size:15.5px">
+          Six people, three days, eight hundred badge scans. The scans give you a job title. They tell you
+          nothing about who was serious, because nobody had a way to write down what was said while it was
+          being said. Sales works the list for a fortnight and quietly stops.
+        </p>
+        <span class="btn btn-line" style="margin-top:26px">
+          See what we're building
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="narrow">
+    <p class="eyebrow">Where we are</p>
+    <h2 style="margin-bottom:26px">Nothing is built yet.</h2>
+    <div class="honest">
+      <p style="margin:0 0 14px">
+        That's deliberate. We've spent our time so far talking to people and killing our own ideas —
+        two earlier versions of this business are already in the bin, both for good reasons.
+      </p>
+      <p style="margin:0 0 14px">
+        What we're doing now is finding out whether the third version is wrong too, before we write
+        the code. If you run open houses or work trade show stands, five minutes of your honest
+        reaction is worth more to us than a hundred sign-ups.
+      </p>
+      <p style="margin:0">
+        We'd particularly like to hear from you if you think we've got it backwards.
+      </p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px">
+      <a class="btn btn-primary" href="/openhouse">Real estate — 2 minutes</a>
+      <a class="btn btn-line" href="/events">Events — 2 minutes</a>
+    </div>
+  </div>
+</section>
+
+<div class="stickybar">
+  <a class="btn btn-primary" href="#who">Pick your side &mdash; 2 min
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</div>
+
+<footer>
+  <div class="wrap" style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+    <a class="wordmark" href="/" style="color:var(--ink)"><svg class="mark" viewBox="0 0 46 66" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg-v" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0" stop-color="#A98BFF"/><stop offset="1" stop-color="#6C3BF5"/></linearGradient>
+    <linearGradient id="lg-b" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0" stop-color="#5CB6FF"/><stop offset="1" stop-color="#1668E3"/></linearGradient>
+    <mask id="lg-m"><rect width="46" height="66" fill="#fff"/>
+      <path d="M14 30h18v10H14z" fill="#000"/></mask>
+  </defs>
+  <rect x="13" y="4" width="30" height="40" rx="15" fill="none" stroke="url(#lg-v)" stroke-width="7.5"/>
+  <rect x="3" y="22" width="30" height="40" rx="15" fill="none" stroke="url(#lg-b)" stroke-width="7.5"/>
+  <path d="M33 30v9" stroke="url(#lg-v)" stroke-width="7.5" stroke-linecap="butt"/>
+</svg><span class="wt" style="font-size:18px">Lynk<em>s</em>t</span></a>
+    <span class="sp" style="margin-left:auto"></span>
+    <a href="/openhouse">Open houses</a>
+    <a href="/events">Events</a>
+    <a href="mailto:hello@lynkst.com">hello@lynkst.com</a>
+    <span style="color:var(--ink-4)">© 2026 Lynkst</span>
+  </div>
+</footer>
+
+<script>
+/* reveal on scroll */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.fadein'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+  els.forEach(function(e,i){e.style.transitionDelay=(i%3)*70+'ms';io.observe(e);});
+})();
+/* nav shade on scroll */
+(function(){var n=document.getElementById('nav');if(!n)return;
+  var solid=n.classList.contains('light');
+  addEventListener('scroll',function(){n.style.boxShadow=scrollY>8?'0 1px 0 rgba(10,13,20,.06)':'none';},{passive:true});
+})();
+</script>
 </body>
-
 </html>

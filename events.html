@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lynkst for trade shows — 800 scans, and no idea who was serious</title>
+  <meta name="description"
+    content="We are building floor-level lead capture that records what was actually said, not just who was scanned. Tell us if we have got it wrong.">
+  <meta property="og:title" content="Lynkst for trade shows — 800 scans, and no idea who was serious">
+  <meta property="og:description"
+    content="We are building floor-level lead capture that records what was actually said, not just who was scanned. Tell us if we have got it wrong.">
+  <meta property="og:url" content="https://lynkst.com/events">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#080b14">
+  <link rel="canonical" href="https://lynkst.com/events">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================================
+   LYNKST — shared design language
+   ============================================================ */
+    :root {
+      /* brand, sampled from the mark */
+      --blue-900: #0a2a6b;
+      --blue-700: #0f4bb5;
+      --blue-600: #1668e3;
+      --blue-500: #2196f3;
+      --blue-400: #4fb0ff;
+      --blue-200: #a8d4ff;
+      --blue-50: #eef6ff;
+      --violet-600: #6c3bf5;
+      --violet-500: #8b5cf6;
+      --violet-400: #a78bfa;
+      --violet-50: #f4f0ff;
+
+      --ink: #0a0d14;
+      --ink-1: #161b26;
+      --ink-2: #3d4557;
+      --ink-3: #6b7387;
+      --ink-4: #9aa1b2;
+      --paper: #ffffff;
+      --paper-2: #fafbfd;
+      --paper-3: #f4f6fa;
+      --line: #e5e9f0;
+      --line-2: #eef1f6;
+
+      --grad: linear-gradient(115deg, var(--violet-600) 0%, var(--blue-600) 48%, var(--blue-500) 100%);
+      --grad-soft: linear-gradient(115deg, var(--violet-500), var(--blue-500));
+
+      --r-sm: 10px;
+      --r: 14px;
+      --r-lg: 22px;
+      --r-xl: 30px;
+      --shadow-sm: 0 1px 2px rgba(10, 13, 20, .05), 0 4px 12px -6px rgba(10, 13, 20, .10);
+      --shadow: 0 2px 4px rgba(10, 13, 20, .04), 0 14px 40px -18px rgba(10, 13, 20, .22);
+      --shadow-lg: 0 40px 80px -40px rgba(10, 20, 50, .45);
+      --ui: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --serif: "Instrument Serif", Georgia, serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--ui);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "cv02", "cv03", "cv04";
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%
+    }
+
+    a {
+      color: inherit
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+      color: inherit
+    }
+
+    button {
+      cursor: pointer
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 28px
+    }
+
+    .narrow {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 28px
+    }
+
+    /* ---- type ---- */
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--blue-600);
+      margin: 0 0 18px;
+    }
+
+    .eyebrow.on-dark {
+      color: var(--blue-400)
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: -.035em;
+      line-height: 1.05;
+      font-weight: 640
+    }
+
+    h1 {
+      font-size: clamp(40px, 6.2vw, 72px)
+    }
+
+    h2 {
+      font-size: clamp(30px, 4.1vw, 46px);
+      letter-spacing: -.032em;
+      line-height: 1.1
+    }
+
+    h3 {
+      font-size: 21px;
+      letter-spacing: -.02em;
+      line-height: 1.25
+    }
+
+    .lede {
+      font-size: clamp(17px, 1.9vw, 21px);
+      line-height: 1.55;
+      color: var(--ink-2);
+      margin: 22px 0 0
+    }
+
+    .lede.on-dark {
+      color: #b9c2d6
+    }
+
+    p {
+      margin: 0 0 18px
+    }
+
+    .muted {
+      color: var(--ink-3)
+    }
+
+    .serif-quote {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.4vw, 38px);
+      line-height: 1.28;
+      letter-spacing: -.015em;
+      font-weight: 400
+    }
+
+    /* ---- buttons ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -.01em;
+      text-decoration: none;
+      transition: transform .14s ease, box-shadow .14s ease, background .14s;
+    }
+
+    .btn:active {
+      transform: translateY(1px)
+    }
+
+    .btn-primary {
+      background: var(--grad);
+      color: #fff;
+      box-shadow: 0 10px 26px -10px rgba(52, 80, 220, .7)
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 16px 34px -12px rgba(52, 80, 220, .8)
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, .22);
+      color: #fff;
+      background: rgba(255, 255, 255, .05)
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, .11)
+    }
+
+    .btn-line {
+      border-color: var(--line);
+      background: var(--paper);
+      color: var(--ink)
+    }
+
+    .btn-line:hover {
+      border-color: #cfd6e2;
+      background: var(--paper-2)
+    }
+
+    .btn svg {
+      width: 17px;
+      height: 17px
+    }
+
+    /* ---- brand mark ---- */
+    .mark {
+      width: 34px;
+      height: auto;
+      flex: none
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none
+    }
+
+    .wordmark .wt {
+      font-size: 22px;
+      font-weight: 680;
+      letter-spacing: -.045em
+    }
+
+    .wordmark .wt em {
+      font-style: normal;
+      background: var(--grad-soft);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    /* ---- nav ---- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: .2s
+    }
+
+    .nav.dark {
+      background: #080b14;
+      border-bottom-color: rgba(255, 255, 255, .07);
+      color: #fff
+    }
+
+    .nav.light {
+      background: rgba(255, 255, 255, .82);
+      border-bottom-color: var(--line-2);
+      color: var(--ink)
+    }
+
+    .nav .inner {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      height: 70px
+    }
+
+    .nav .sp {
+      margin-left: auto
+    }
+
+    .navlink {
+      font-size: 14.5px;
+      font-weight: 520;
+      text-decoration: none;
+      opacity: .72;
+      transition: .15s;
+      white-space: nowrap
+    }
+
+    .navlink:hover {
+      opacity: 1
+    }
+
+    .nav .btn {
+      white-space: nowrap
+    }
+
+    /* mobile: the nav must never wrap — most traffic arrives here from a phone */
+    @media (max-width:720px) {
+      .nav .inner {
+        height: 58px;
+        gap: 12px
+      }
+
+      .nav .navlink,
+      .nav .pill,
+      .nav .btn {
+        display: none
+      }
+
+      .wordmark .wt {
+        font-size: 19px
+      }
+
+      .hero .wrap {
+        padding-top: 52px;
+        padding-bottom: 64px
+      }
+
+      section {
+        padding: 64px 0
+      }
+
+      .sec-tight {
+        padding: 48px 0
+      }
+
+      .card {
+        padding: 24px
+      }
+
+      .formcard .fh {
+        padding: 24px 20px 20px
+      }
+
+      .formcard .fb {
+        padding: 22px 20px 26px
+      }
+
+      .shelf {
+        margin-top: 44px
+      }
+
+      .cta-row .btn {
+        width: 100%;
+        justify-content: center
+      }
+
+      footer .wrap {
+        gap: 14px
+      }
+    }
+
+    /* sticky action bar — the form sits a long way down on a phone */
+    .stickybar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 70;
+      display: none;
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--line);
+    }
+
+    .stickybar .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 15px 22px
+    }
+
+    @media (max-width:720px) {
+      .stickybar {
+        display: block
+      }
+
+      body {
+        padding-bottom: 82px
+      }
+    }
+
+    /* ---- dark hero ---- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #080b14;
+      color: #fff;
+      isolation: isolate
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -30% -10% auto -10%;
+      height: 150%;
+      z-index: -2;
+      background:
+        radial-gradient(46% 46% at 18% 12%, rgba(124, 77, 255, .55), transparent 62%),
+        radial-gradient(44% 44% at 82% 8%, rgba(33, 150, 243, .50), transparent 60%),
+        radial-gradient(60% 50% at 50% 96%, rgba(22, 104, 227, .34), transparent 66%);
+      filter: blur(6px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .5;
+      background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(70% 60% at 50% 40%, #000, transparent 78%);
+    }
+
+    .hero .wrap {
+      position: relative;
+      padding-top: 88px;
+      padding-bottom: 100px;
+      text-align: center
+    }
+
+    .hero .inner-h {
+      max-width: 900px;
+      margin: 0 auto
+    }
+
+    .hero .lede {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .hero .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      justify-content: center;
+      align-items: center
+    }
+
+    .hero h1 {
+      margin-bottom: 4px
+    }
+
+    /* ---- hero shelf: a glimpse of the thing ---- */
+    .shelf {
+      margin: 64px auto 0;
+      max-width: 940px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .04);
+      box-shadow: 0 60px 120px -50px rgba(0, 0, 0, .85), inset 0 1px 0 rgba(255, 255, 255, .09);
+      backdrop-filter: blur(8px);
+    }
+
+    .shelf .sh-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, .09);
+      background: rgba(255, 255, 255, .03)
+    }
+
+    .shelf .sh-bar i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .18);
+      display: block
+    }
+
+    .shelf .sh-bar span {
+      margin-left: 8px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: #8792ab
+    }
+
+    .shelf .sh-body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, .07)
+    }
+
+    @media (max-width:720px) {
+      .shelf .sh-body {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .shelf .cell {
+      background: #0c101b;
+      padding: 22px 20px;
+      text-align: left
+    }
+
+    .shelf .cell .ck {
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #6f7b95
+    }
+
+    .shelf .cell .cv {
+      font-size: 26px;
+      font-weight: 650;
+      letter-spacing: -.03em;
+      margin: 8px 0 5px;
+      color: #fff
+    }
+
+    .shelf .cell .cs {
+      font-size: 12.5px;
+      color: #8792ab;
+      line-height: 1.45
+    }
+
+    /* ---- sections ---- */
+    section {
+      padding: 96px 0
+    }
+
+    .sec-tight {
+      padding: 70px 0
+    }
+
+    .bg-2 {
+      background: var(--paper-2)
+    }
+
+    .bg-3 {
+      background: var(--paper-3)
+    }
+
+    .bg-ink {
+      background: var(--ink);
+      color: #fff
+    }
+
+    .rule {
+      height: 1px;
+      background: var(--line);
+      border: 0;
+      margin: 0
+    }
+
+    /* ---- cards ---- */
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm)
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px
+    }
+
+    @media (max-width:880px) {
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .numtag {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      flex: none;
+      background: var(--blue-50);
+      color: var(--blue-700);
+      font-weight: 700;
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---- stat ---- */
+    .stat {
+      font-size: clamp(34px, 4.6vw, 52px);
+      font-weight: 660;
+      letter-spacing: -.04em;
+      line-height: 1;
+      background: var(--grad-soft);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .stat-k {
+      font-size: 14px;
+      color: var(--ink-3);
+      margin-top: 10px;
+      line-height: 1.45
+    }
+
+    /* ---- form ---- */
+    .formcard {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden
+    }
+
+    .formcard .fh {
+      padding: 30px 32px 24px;
+      border-bottom: 1px solid var(--line-2);
+      background: var(--paper-2)
+    }
+
+    .formcard .fb {
+      padding: 28px 32px 32px
+    }
+
+    .q {
+      margin-bottom: 26px
+    }
+
+    .q>label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      margin-bottom: 4px
+    }
+
+    .q .hint {
+      font-size: 13.5px;
+      color: var(--ink-3);
+      margin-bottom: 12px;
+      line-height: 1.5
+    }
+
+    .opts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px
+    }
+
+    .opt {
+      padding: 9px 15px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--paper);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-2);
+      transition: .13s;
+      text-align: left;
+    }
+
+    .opt:hover {
+      border-color: #c9d2e0
+    }
+
+    .opt[aria-pressed="true"] {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+      color: var(--blue-700);
+      font-weight: 620;
+      box-shadow: 0 0 0 3px rgba(22, 104, 227, .12);
+    }
+
+    .q textarea,
+    .q input[type=email],
+    .q input[type=text] {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-size: 15px;
+      background: var(--paper);
+      transition: .13s;
+      font-family: inherit;
+    }
+
+    .q textarea {
+      min-height: 96px;
+      resize: vertical
+    }
+
+    .q textarea:focus,
+    .q input:focus {
+      outline: none;
+      border-color: var(--blue-600);
+      box-shadow: 0 0 0 3px rgba(22, 104, 227, .13)
+    }
+
+    .formfoot {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px
+    }
+
+    .privacy {
+      font-size: 12.5px;
+      color: var(--ink-3);
+      line-height: 1.5;
+      flex: 1;
+      min-width: 220px
+    }
+
+    .done {
+      padding: 60px 32px;
+      text-align: center
+    }
+
+    .done .tick {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--grad);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      font-size: 28px
+    }
+
+    /* ---- misc ---- */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 13px;
+      border-radius: 30px;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: .01em
+    }
+
+    .pill-dark {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .14);
+      color: #cfd8ea
+    }
+
+    .pill-light {
+      background: var(--blue-50);
+      border: 1px solid #d5e6fb;
+      color: var(--blue-700)
+    }
+
+    .dot-live {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 0 3px rgba(74, 222, 128, .22)
+    }
+
+    .honest {
+      border-left: 3px solid var(--violet-500);
+      padding: 4px 0 4px 20px;
+      color: var(--ink-2);
+      font-size: 15.5px;
+      line-height: 1.6
+    }
+
+    footer {
+      padding: 56px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--ink-3);
+      font-size: 14px
+    }
+
+    footer a {
+      color: var(--ink-2);
+      text-decoration: none
+    }
+
+    footer a:hover {
+      color: var(--ink)
+    }
+
+    .fadein {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .fadein.in {
+      opacity: 1;
+      transform: none
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .fadein {
+        opacity: 1;
+        transform: none;
+        transition: none
+      }
+    }
+
+    .hero h1 {
+      background: linear-gradient(180deg, #fff 20%, #c3cfe6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav dark" id="nav">
+    <div class="wrap inner">
+      <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 46 66" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg-v" x1="10%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0" stop-color="#A98BFF" />
+              <stop offset="1" stop-color="#6C3BF5" />
+            </linearGradient>
+            <linearGradient id="lg-b" x1="10%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0" stop-color="#5CB6FF" />
+              <stop offset="1" stop-color="#1668E3" />
+            </linearGradient>
+            <mask id="lg-m">
+              <rect width="46" height="66" fill="#fff" />
+              <path d="M14 30h18v10H14z" fill="#000" />
+            </mask>
+          </defs>
+          <rect x="13" y="4" width="30" height="40" rx="15" fill="none" stroke="url(#lg-v)" stroke-width="7.5" />
+          <rect x="3" y="22" width="30" height="40" rx="15" fill="none" stroke="url(#lg-b)" stroke-width="7.5" />
+          <path d="M33 30v9" stroke="url(#lg-v)" stroke-width="7.5" stroke-linecap="butt" />
+        </svg><span class="wt">Lynk<em>s</em>t</span></a>
+      <span class="pill pill-dark" style="margin-left:4px">Events</span>
+      <div class="sp"></div>
+      <a class="btn btn-ghost" href="#form" style="padding:9px 17px;font-size:14px">Tell us we're wrong</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="inner-h">
+        <span class="pill pill-dark" style="margin-bottom:26px"><span class="dot-live"></span>Not built yet — asking
+          first</span>
+        <h1>800 scans.<br>Nobody serious.</h1>
+        <p class="lede on-dark" style="max-width:640px">
+          Six people, three days, a six-figure stand. What comes back is name, title, company. Nothing about
+          who was actually buying — because nobody had a way to write down what was said while it was being said.
+        </p>
+        <p class="lede on-dark" style="max-width:640px;margin-top:14px">
+          Sales works the list for a fortnight, closes little, and quietly stops trusting event leads.
+          Then you have to justify the stand again next year.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#form">
+            Tell us we're wrong — 2 min
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <span style="color:#8d99b3;font-size:14px">No signup. No demo call. We just want the honest answer.</span>
+        </div>
+      </div>
+
+      <div class="shelf">
+        <div class="sh-bar"><i></i><i></i><i></i><span>Booth H-214 — day one, 17:00</span></div>
+        <div class="sh-body">
+          <div class="cell">
+            <div class="ck">Captured</div>
+            <div class="cv">64 &rarr; 26</div>
+            <div class="cs">Scans against people who actually left details. Both numbers matter; only one is reported.
+            </div>
+          </div>
+          <div class="cell">
+            <div class="ck">Qualified on the floor</div>
+            <div class="cv">17</div>
+            <div class="cs">By the rep who spoke to them, in their own words, while they were still standing there.
+            </div>
+          </div>
+          <div class="cell">
+            <div class="ck">Tier 1 targets reached</div>
+            <div class="cv">3 of 5</div>
+            <div class="cs">Matched live at the stand. The two who never showed are Monday&rsquo;s call list.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec-tight bg-2">
+    <div class="wrap">
+      <div class="grid-3" style="gap:32px">
+        <div>
+          <div class="stat">30 sec</div>
+          <div class="stat-k">the window in which a rep still remembers the conversation properly.</div>
+        </div>
+        <div>
+          <div class="stat">8–20</div>
+          <div class="stat-k">shows in a programme. That's the level your spend is judged at, not the show.</div>
+        </div>
+        <div>
+          <div class="stat">11pm</div>
+          <div class="stat-k">when notes actually get written, from memory, in a hotel room. Hence thin data.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div style="max-width:700px;margin-bottom:52px">
+        <p class="eyebrow">What we think the job actually is</p>
+        <h2>The scanner answers the wrong question.</h2>
+        <p class="lede">It tells you a badge was present. Your VP of sales is asking who was serious — and that
+          answer only exists in the thirty seconds after the conversation ends.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card fadein" style="padding:32px">
+          <h3>Qualify on the floor, not from memory</h3>
+          <p class="muted" style="margin:14px 0 0;font-size:15.5px">
+            Interest, temperature, fit, and what the person actually said — in their words — captured while
+            they're still standing there. Under thirty seconds, without breaking the conversation. That's the
+            part official lead retrieval has never done.
+          </p>
+        </div>
+        <div class="card fadein" style="padding:32px">
+          <h3>Capture that works when the badge doesn't</h3>
+          <p class="muted" style="margin:14px 0 0;font-size:15.5px">
+            Plenty of organisers restrict third-party access to badge data, and convention centre wifi is a
+            rumour. QR, NFC tap, business-card scan, or typed by hand — offline, syncing when it can. Never
+            dependent on somebody else's hardware or their post-show export schedule.
+          </p>
+        </div>
+        <div class="card fadein" style="padding:32px">
+          <h3>Target accounts, matched at the stand</h3>
+          <p class="muted" style="margin:14px 0 0;font-size:15.5px">
+            Marketing already has the account list. Nothing on a show floor reads it in real time — which is why
+            a tier-one target walks past your stand and gets the same follow-up as everyone else, eleven days
+            later. And the inverse matters more: which targets never showed at all.
+          </p>
+        </div>
+        <div class="card fadein" style="padding:32px">
+          <h3>The programme, not the event</h3>
+          <p class="muted" style="margin:14px 0 0;font-size:15.5px">
+            Cost per qualified lead across every show, with one consistent definition of "qualified" — because
+            it was captured the same way at each stand. The same person turning up at three shows is one story,
+            not three unrelated rows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink" style="padding:78px 0">
+    <div class="narrow">
+      <p class="eyebrow on-dark">What we are not</p>
+      <p class="serif-quote" style="color:#fff;margin:0 0 26px">
+        We're not a CRM, and we won't ask you to move off yours.
+      </p>
+      <p style="color:#b9c2d6;font-size:16.5px;line-height:1.65;margin:0">
+        Salesforce and HubSpot hold the contact, the opportunity and the pipeline. They don't hold what happened
+        in the fifteen minutes at your stand — what was asked, how serious it was, which permissions you were
+        actually given. We capture that at the moment of contact and push it into the CRM you already own,
+        attached to the record that's already there.
+      </p>
+    </div>
+  </section>
+
+  <section id="form" style="padding-top:88px">
+    <div class="narrow">
+      <div style="text-align:center;max-width:620px;margin:0 auto 40px">
+        <p class="eyebrow">Six questions</p>
+        <h2>Tell us we're wrong.</h2>
+        <p class="lede">Everything above is a guess. You're the one who works the stand. Answer two questions or
+          all six — both are useful, and there's no signup at the end of it.</p>
+      </div>
+
+      <div class="formcard">
+        <div id="formInner">
+          <div class="fh">
+            <strong style="font-size:15.5px">Trade show reality check</strong>
+            <div class="muted" style="font-size:13.5px;margin-top:3px">Anonymous unless you choose to leave an email.
+            </div>
+          </div>
+          <div class="fb">
+
+            <div class="q" data-k="role">
+              <label>What do you do?</label>
+              <div class="opts">
+                <button class="opt" aria-pressed="false">Field / event marketing</button>
+                <button class="opt" aria-pressed="false">Demand gen</button>
+                <button class="opt" aria-pressed="false">Marketing ops</button>
+                <button class="opt" aria-pressed="false">Sales / AE</button>
+                <button class="opt" aria-pressed="false">Founder</button>
+                <button class="opt" aria-pressed="false">Something else</button>
+              </div>
+            </div>
+
+            <div class="q" data-k="shows">
+              <label>How many shows do you exhibit at a year?</label>
+              <div class="opts">
+                <button class="opt" aria-pressed="false">1–2</button>
+                <button class="opt" aria-pressed="false">3–5</button>
+                <button class="opt" aria-pressed="false">6–10</button>
+                <button class="opt" aria-pressed="false">More than 10</button>
+              </div>
+            </div>
+
+            <div class="q" data-k="capture_today" data-multi="1">
+              <label>What do you capture leads with today?</label>
+              <div class="hint">Pick as many as apply.</div>
+              <div class="opts">
+                <button class="opt" aria-pressed="false">Organiser's scanner</button>
+                <button class="opt" aria-pressed="false">Popl / Blinq</button>
+                <button class="opt" aria-pressed="false">iCapture / Captello</button>
+                <button class="opt" aria-pressed="false">Paper or a spreadsheet</button>
+                <button class="opt" aria-pressed="false">Business cards</button>
+                <button class="opt" aria-pressed="false">Something homegrown</button>
+              </div>
+            </div>
+
+            <div class="q" data-k="followup_rate">
+              <label>Honestly — what share of scanned badges get a real follow-up within a week?</label>
+              <div class="hint">Not an automated email. A follow-up somebody meant.</div>
+              <div class="opts">
+                <button class="opt" aria-pressed="false">Almost none</button>
+                <button class="opt" aria-pressed="false">Under a quarter</button>
+                <button class="opt" aria-pressed="false">About half</button>
+                <button class="opt" aria-pressed="false">Most of them</button>
+                <button class="opt" aria-pressed="false">No idea, and that's the problem</button>
+              </div>
+            </div>
+
+            <div class="q" data-k="justify">
+              <label>When you're asked to justify the stand for next year, what number goes in the deck?</label>
+              <div class="hint">And do you believe it?</div>
+              <textarea placeholder="Scans, MQLs, influenced pipeline, nothing…"></textarea>
+            </div>
+
+            <div class="q" data-k="wrong">
+              <label>Where do you think we've got this wrong?</label>
+              <div class="hint">The single most valuable box on this page. Be blunt.</div>
+              <textarea placeholder="Reps would never do this because…"></textarea>
+            </div>
+
+            <div class="q" data-k="email" style="margin-bottom:20px">
+              <label>Email — only if you'd be up for a 15 minute call</label>
+              <div class="hint">Optional. We won't add you to anything. No newsletter exists.</div>
+              <input type="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+
+            <div class="formfoot">
+              <button class="btn btn-primary" id="sendBtn">
+                Send it
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+              <span class="privacy">
+                Goes to a founder, not a queue. We don't sell or share anything, and there's no product to be
+                sold at the end of this — there isn't one yet.
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stickybar">
+    <a class="btn btn-primary" href="#form">Tell us we&rsquo;re wrong — 2 min
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </a>
+  </div>
+
+  <footer>
+    <div class="wrap" style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+      <a class="wordmark" href="/" style="color:var(--ink)"><svg class="mark" viewBox="0 0 46 66" fill="none"
+          aria-hidden="true">
+          <defs>
+            <linearGradient id="lg-v" x1="10%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0" stop-color="#A98BFF" />
+              <stop offset="1" stop-color="#6C3BF5" />
+            </linearGradient>
+            <linearGradient id="lg-b" x1="10%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0" stop-color="#5CB6FF" />
+              <stop offset="1" stop-color="#1668E3" />
+            </linearGradient>
+            <mask id="lg-m">
+              <rect width="46" height="66" fill="#fff" />
+              <path d="M14 30h18v10H14z" fill="#000" />
+            </mask>
+          </defs>
+          <rect x="13" y="4" width="30" height="40" rx="15" fill="none" stroke="url(#lg-v)" stroke-width="7.5" />
+          <rect x="3" y="22" width="30" height="40" rx="15" fill="none" stroke="url(#lg-b)" stroke-width="7.5" />
+          <path d="M33 30v9" stroke="url(#lg-v)" stroke-width="7.5" stroke-linecap="butt" />
+        </svg><span class="wt" style="font-size:18px">Lynk<em>s</em>t</span></a>
+      <span class="sp" style="margin-left:auto"></span>
+      <a href="/">Lynkst</a>
+      <a href="/openhouse">Open houses</a>
+      <a href="mailto:contact@lynkst.com">contact@lynkst.com</a>
+      <span style="color:var(--ink-4)">© 2026 Lynkst</span>
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       REACTION FORM
+       Paste your endpoint below. Works with Formspree, Basin, Tally,
+       Getform — anything that accepts a POST of JSON or form-encoded
+       data. Leave it empty and the form falls back to an email draft.
+       ============================================================ */
+    const FORM_ENDPOINT = "https://formspree.io/f/xvovdzlk";           // e.g. "https://formspree.io/f/xxxxxxxx"
+    const FALLBACK_EMAIL = "contact@lynkst.com";
+    const SURVEY = "events";
+
+    const answers = {};
+    document.addEventListener('click', function (e) {
+      const o = e.target.closest('.opt'); if (!o) return;
+      const q = o.closest('.q'), key = q.dataset.k, multi = q.dataset.multi === '1';
+      if (multi) {
+        const on = o.getAttribute('aria-pressed') === 'true';
+        o.setAttribute('aria-pressed', String(!on));
+        answers[key] = [].slice.call(q.querySelectorAll('.opt[aria-pressed="true"]')).map(b => b.textContent.trim());
+      } else {
+        q.querySelectorAll('.opt').forEach(b => b.setAttribute('aria-pressed', 'false'));
+        o.setAttribute('aria-pressed', 'true');
+        answers[key] = o.textContent.trim();
+      }
+    });
+    document.querySelectorAll('.q textarea, .q input').forEach(function (el) {
+      el.addEventListener('input', function () { answers[el.closest('.q').dataset.k] = el.value; });
+    });
+
+    function payload() {
+      return Object.assign({
+        survey: SURVEY, submitted_at: new Date().toISOString(),
+        page: location.pathname, referrer: document.referrer || ''
+      }, answers);
+    }
+    function renderDone(msg) {
+      document.getElementById('formInner').innerHTML =
+        '<div class="done"><div class="tick">&#10003;</div>' +
+        '<h3 style="font-size:24px;margin-bottom:10px">Thank you — genuinely</h3>' +
+        '<p class="muted" style="max-width:42ch;margin:0 auto">' + msg + '</p></div>';
+    }
+    document.getElementById('sendBtn').addEventListener('click', async function () {
+      const p = payload();
+      const answered = Object.keys(answers).filter(k => answers[k] && answers[k].length).length;
+      if (answered < 2) { alert('Answer a couple of questions first — even two is useful.'); return; }
+      this.disabled = true; this.textContent = 'Sending…';
+      if (FORM_ENDPOINT) {
+        try {
+          await fetch(FORM_ENDPOINT, {
+            method: 'POST', headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            }, body: JSON.stringify(p)
+          });
+          renderDone('That goes straight to a founder, not a queue. If you left an email we will reply personally within a couple of days.');
+          return;
+        } catch (err) { /* fall through to email */ }
+      }
+      const body = Object.keys(p).map(k => k + ':\n' + (Array.isArray(p[k]) ? p[k].join(', ') : p[k]) + '\n').join('\n');
+      location.href = 'mailto:' + FALLBACK_EMAIL + '?subject=' + encodeURIComponent('Reaction — ' + SURVEY)
+        + '&body=' + encodeURIComponent(body);
+      renderDone('Your email client should have opened with the answers filled in. If it did not, mail us at ' + FALLBACK_EMAIL + '.');
+    });
+  </script>
+
+  <script>
+    /* reveal on scroll */
+    (function () {
+      var els = [].slice.call(document.querySelectorAll('.fadein'));
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in') }); return; }
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: .14 });
+      els.forEach(function (e, i) { e.style.transitionDelay = (i % 3) * 70 + 'ms'; io.observe(e); });
+    })();
+    /* nav shade on scroll */
+    (function () {
+      var n = document.getElementById('nav'); if (!n) return;
+      var solid = n.classList.contains('light');
+      addEventListener('scroll', function () { n.style.boxShadow = scrollY > 8 ? '0 1px 0 rgba(10,13,20,.06)' : 'none'; }, { passive: true });
+    })();
+  </script>
+</body>
+
+</html>
